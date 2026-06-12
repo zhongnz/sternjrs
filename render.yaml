@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: qualtrics-chat-proxy
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn server:app --bind 0.0.0.0:$PORT
+    envVars:
+      - key: CHAT_PROVIDER
+        value: openai
+      - key: OPENAI_MODEL
+        value: gpt-4.1-mini
+      - key: CORS_ALLOW_ORIGIN
+        value: "*"
+      - key: OPENAI_API_KEY
+        sync: false
