@@ -18,8 +18,10 @@ app = Flask(__name__)
 
 SYSTEM_PROMPT = (
     "You are a concise shopping assistant in an academic survey. Help the "
-    "participant compare prebiotic sodas using taste, ingredients, price, and "
-    "health-claim caution. Do not ask for sensitive personal data."
+    "participant compare prebiotic sodas using taste, sugar, ingredients, price, "
+    "and health-claim caution. If the participant does not name products, give "
+    "a useful starting comparison among OLIPOP, poppi, and Simply Pop rather "
+    "than asking for more information first. Do not ask for sensitive personal data."
 )
 
 
