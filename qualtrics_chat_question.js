@@ -1,5 +1,5 @@
 Qualtrics.SurveyEngine.addOnReady(function () {
-  const PROXY_URL = "https://YOUR-PROXY-HOST.example.com/chat";
+  const PROXY_URL = "https://qualtrics-chat-proxy.onrender.com/chat";
   const container = document.createElement("div");
   container.innerHTML = `
     <div id="ai-chat-log" style="border:1px solid #ccc; min-height:180px; padding:12px; margin-bottom:8px; overflow:auto;"></div>

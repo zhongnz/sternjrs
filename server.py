@@ -36,6 +36,18 @@ def health():
     return jsonify({"ok": True})
 
 
+@app.get("/")
+def index():
+    return jsonify(
+        {
+            "ok": True,
+            "service": "qualtrics-chat-proxy",
+            "health": "/health",
+            "chat": "/chat",
+        }
+    )
+
+
 @app.route("/chat", methods=["POST", "OPTIONS"])
 def chat():
     if request.method == "OPTIONS":
